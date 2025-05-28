@@ -1,0 +1,375 @@
+{
+  "DBSCAN": [
+    {
+      "Rank": 1,
+      "Params": {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metric": "euclidean",
+        "algorithm": "auto",
+        "leaf_size": 20,
+        "p": 1
+      },
+      "ARI": 0.685392281546781,
+      "silhouette": 0.7771781108005227,
+      "CH": 1008.5954705710618,
+      "DB": 0.45080709089473675,
+      "AMI": 0.7971362868152464,
+      "Homogeneity": 0.7776623420226015,
+      "Completeness": 0.8276889383864146,
+      "V-Measure": 0.8018961658382776
+    },
+    {
+      "Rank": 2,
+      "Params": {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metric": "euclidean",
+        "algorithm": "auto",
+        "leaf_size": 20,
+        "p": 2
+      },
+      "ARI": 0.685392281546781,
+      "silhouette": 0.7771781108005227,
+      "CH": 1008.5954705710618,
+      "DB": 0.45080709089473675,
+      "AMI": 0.7971362868152464,
+      "Homogeneity": 0.7776623420226015,
+      "Completeness": 0.8276889383864146,
+      "V-Measure": 0.8018961658382776
+    },
+    {
+      "Rank": 3,
+      "Params": {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metric": "euclidean",
+        "algorithm": "auto",
+        "leaf_size": 30,
+        "p": 1
+      },
+      "ARI": 0.685392281546781,
+      "silhouette": 0.7771781108005227,
+      "CH": 1008.5954705710618,
+      "DB": 0.45080709089473675,
+      "AMI": 0.7971362868152464,
+      "Homogeneity": 0.7776623420226015,
+      "Completeness": 0.8276889383864146,
+      "V-Measure": 0.8018961658382776
+    },
+    {
+      "Rank": 4,
+      "Params": {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metric": "euclidean",
+        "algorithm": "auto",
+        "leaf_size": 30,
+        "p": 2
+      },
+      "ARI": 0.685392281546781,
+      "silhouette": 0.7771781108005227,
+      "CH": 1008.5954705710618,
+      "DB": 0.45080709089473675,
+      "AMI": 0.7971362868152464,
+      "Homogeneity": 0.7776623420226015,
+      "Completeness": 0.8276889383864146,
+      "V-Measure": 0.8018961658382776
+    },
+    {
+      "Rank": 5,
+      "Params": {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metric": "euclidean",
+        "algorithm": "auto",
+        "leaf_size": 40,
+        "p": 1
+      },
+      "ARI": 0.685392281546781,
+      "silhouette": 0.7771781108005227,
+      "CH": 1008.5954705710618,
+      "DB": 0.45080709089473675,
+      "AMI": 0.7971362868152464,
+      "Homogeneity": 0.7776623420226015,
+      "Completeness": 0.8276889383864146,
+      "V-Measure": 0.8018961658382776
+    }
+  ],
+  "OPTICS": [
+    {
+      "Rank": 1,
+      "Params": {
+        "min_samples": 10,
+        "xi": 0.05,
+        "min_cluster_size": 20,
+        "metric": "euclidean",
+        "cluster_method": "xi",
+        "algorithm": "auto",
+        "p": 1
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 2,
+      "Params": {
+        "min_samples": 10,
+        "xi": 0.05,
+        "min_cluster_size": 20,
+        "metric": "euclidean",
+        "cluster_method": "xi",
+        "algorithm": "auto",
+        "p": 2
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 3,
+      "Params": {
+        "min_samples": 10,
+        "xi": 0.05,
+        "min_cluster_size": 20,
+        "metric": "euclidean",
+        "cluster_method": "xi",
+        "algorithm": "ball_tree",
+        "p": 1
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 4,
+      "Params": {
+        "min_samples": 10,
+        "xi": 0.05,
+        "min_cluster_size": 20,
+        "metric": "euclidean",
+        "cluster_method": "xi",
+        "algorithm": "ball_tree",
+        "p": 2
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 5,
+      "Params": {
+        "min_samples": 10,
+        "xi": 0.05,
+        "min_cluster_size": 20,
+        "metric": "euclidean",
+        "cluster_method": "xi",
+        "algorithm": "kd_tree",
+        "p": 1
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    }
+  ],
+  "HDBSCAN": [
+    {
+      "Rank": 1,
+      "Params": {
+        "min_cluster_size": 5,
+        "min_samples": 3,
+        "cluster_selection_epsilon": 0.0,
+        "cluster_selection_method": "eom",
+        "alpha": 1.0
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 2,
+      "Params": {
+        "min_cluster_size": 5,
+        "min_samples": 3,
+        "cluster_selection_epsilon": 0.0,
+        "cluster_selection_method": "eom",
+        "alpha": 1.5
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 3,
+      "Params": {
+        "min_cluster_size": 5,
+        "min_samples": 3,
+        "cluster_selection_epsilon": 0.0,
+        "cluster_selection_method": "eom",
+        "alpha": 2.0
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 4,
+      "Params": {
+        "min_cluster_size": 5,
+        "min_samples": 3,
+        "cluster_selection_epsilon": 0.1,
+        "cluster_selection_method": "eom",
+        "alpha": 1.0
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    },
+    {
+      "Rank": 5,
+      "Params": {
+        "min_cluster_size": 5,
+        "min_samples": 3,
+        "cluster_selection_epsilon": 0.1,
+        "cluster_selection_method": "eom",
+        "alpha": 1.5
+      },
+      "ARI": 0.6836782301456176,
+      "silhouette": 0.7814657654807114,
+      "CH": 1192.5408223193785,
+      "DB": 0.38622459744822857,
+      "AMI": 0.8026596561972917,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.8349468302527455,
+      "V-Measure": 0.8073007772157909
+    }
+  ],
+  "BIRCH": [
+    {
+      "Rank": 1,
+      "Params": {
+        "threshold": 0.7,
+        "branching_factor": 25,
+        "n_clusters": null
+      },
+      "ARI": 0.6789685602439403,
+      "silhouette": 0.7641594886627527,
+      "CH": 711.3874491729624,
+      "DB": 0.5331016488460804,
+      "AMI": 0.780426325223288,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.7978370455456878,
+      "V-Measure": 0.7895466796130629
+    },
+    {
+      "Rank": 2,
+      "Params": {
+        "threshold": 0.7,
+        "branching_factor": 50,
+        "n_clusters": null
+      },
+      "ARI": 0.6789685602439403,
+      "silhouette": 0.7641594886627527,
+      "CH": 711.3874491729624,
+      "DB": 0.5331016488460804,
+      "AMI": 0.780426325223288,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.7978370455456878,
+      "V-Measure": 0.7895466796130629
+    },
+    {
+      "Rank": 3,
+      "Params": {
+        "threshold": 0.7,
+        "branching_factor": 100,
+        "n_clusters": null
+      },
+      "ARI": 0.6789685602439403,
+      "silhouette": 0.7641594886627527,
+      "CH": 711.3874491729624,
+      "DB": 0.5331016488460804,
+      "AMI": 0.780426325223288,
+      "Homogeneity": 0.7814268330457843,
+      "Completeness": 0.7978370455456878,
+      "V-Measure": 0.7895466796130629
+    },
+    {
+      "Rank": 4,
+      "Params": {
+        "threshold": 0.5,
+        "branching_factor": 25,
+        "n_clusters": null
+      },
+      "ARI": 0.4987396838452363,
+      "silhouette": 0.6266717543289038,
+      "CH": 949.2107456084722,
+      "DB": 0.6713046619668694,
+      "AMI": 0.6557698266075228,
+      "Homogeneity": 0.7857381487311744,
+      "Completeness": 0.5903056053352992,
+      "V-Measure": 0.6741437285712747
+    },
+    {
+      "Rank": 5,
+      "Params": {
+        "threshold": 0.5,
+        "branching_factor": 50,
+        "n_clusters": null
+      },
+      "ARI": 0.4987396838452363,
+      "silhouette": 0.6266717543289038,
+      "CH": 949.2107456084722,
+      "DB": 0.6713046619668694,
+      "AMI": 0.6557698266075228,
+      "Homogeneity": 0.7857381487311744,
+      "Completeness": 0.5903056053352992,
+      "V-Measure": 0.6741437285712747
+    }
+  ]
+}
