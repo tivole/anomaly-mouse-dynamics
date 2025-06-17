@@ -1,9 +1,9 @@
 import csv
+import argparse
 from matplotlib.lines import Line2D
 import numpy as np
 import matplotlib.pyplot as plt
-
-LOG_FILE = "mouse_telemetry.log"
+import os
 
 def read_mouse_data(log_file):
     monitors = {}
@@ -34,21 +34,23 @@ def read_mouse_data(log_file):
 
     return monitors
 
-def plot_all_events(moves, clicks, scrolls, monitor_index):
+def plot_all_events(moves, clicks, scrolls, monitor_index, out_path=None):
     fig, ax = plt.subplots(figsize=(10,6), dpi=120)
 
-    mov_line, = ax.plot(
-        moves[:,0], moves[:,1],
-        linewidth=2, alpha=0.3, color='blue',
-        label='Movement'
-    )
+    if len(moves):
+        mov_line, = ax.plot(
+            moves[:,0], moves[:,1],
+            linewidth=2, alpha=0.3, color='blue',
+            label='Movement'
+        )
 
-    click_sc = ax.scatter(
-        clicks[:,0], clicks[:,1],
-        marker='o', s=30,
-        facecolors='none', edgecolors='red',
-        label='Clicks'
-    )
+    if len(clicks):
+        click_sc = ax.scatter(
+            clicks[:,0], clicks[:,1],
+            marker='o', s=30,
+            facecolors='none', edgecolors='red',
+            label='Clicks'
+        )
 
     arrow_scale = 20
     for x, y, dx, dy in scrolls:
@@ -67,8 +69,7 @@ def plot_all_events(moves, clicks, scrolls, monitor_index):
     ax.invert_yaxis()
     ax.set_xlabel('X Coordinate')
     ax.set_ylabel('Y Coordinate')
-    # ax.set_title(f'Mouse Events on Monitor {monitor_index}')
-    ax.set_title('Mouse dynamics')
+    ax.set_title(f'Mouse dynamics (Monitor {monitor_index})')
     ax.margins(0.02)
 
     scroll_proxy = Line2D(
@@ -85,14 +86,31 @@ def plot_all_events(moves, clicks, scrolls, monitor_index):
     ax.legend(handles=handles, loc='upper right')
 
     plt.tight_layout()
-    plt.show()
+    if out_path:
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        plt.savefig(out_path, dpi=120)
+        print(f"Saved plot to {out_path}")
+    else:
+        plt.show()
+
+def main():
+    parser = argparse.ArgumentParser(description="Plot mouse movements, clicks and scrolls from a telemetry log.")
+    parser.add_argument("--input", "-i", required=True, help="Path to mouse_telemetry.log CSV file")
+    parser.add_argument("--output", "-o", help="Output image path (e.g. visuals/trajectory.png). If omitted, shows interactively.")
+    parser.add_argument("--monitor", "-m", default="1", help="Monitor index to plot (default: 1)")
+    args = parser.parse_args()
+
+    monitors = read_mouse_data(args.log)
+    if args.monitor not in monitors:
+        print(f"No data for monitor '{args.monitor}' in {args.log}")
+        return
+
+    data = monitors[args.monitor]
+    moves = np.array(data["moves"]) if data["moves"] else np.empty((0,2))
+    clicks = np.array(data["clicks"]) if data["clicks"] else np.empty((0,2))
+    scrolls = data["scrolls"]
+
+    plot_all_events(moves, clicks, scrolls, args.monitor, out_path=args.out)
 
 if __name__ == "__main__":
-    monitors = read_mouse_data(LOG_FILE)
-    data = monitors["1"]
-    plot_all_events(
-        np.array(data["moves"]),
-        np.array(data["clicks"]),
-        np.array(data["scrolls"]),
-        monitor_index=1
-    )
+    main()
