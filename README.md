@@ -75,15 +75,18 @@ Produces a plot of cursor movements, clicks, and scroll events.
 
 ## Citation
 
-If you use this code in your research, please cite our paper (will be updated with actual details, once available):
+If you use this code in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{KNAsgarov2025,
+@inproceedings{AsgarovKN2025,
   title={Detection of Behavioural Baseline Deviation in Endpoint Usage through Mouse Dynamics Analysis},
-  author={},
-  booktitle={},
+  author={Asgarov, K. N.},
+  booktitle={International Journal on Information Technologies \& Security},
   year={2025},
-  publisher={}
+  volume={17},
+  number={3},
+  pages={95--106},
+  doi={10.59035/AIFB7822},
+  url={https://doi.org/10.59035/AIFB7822}
 }
 ```
-
